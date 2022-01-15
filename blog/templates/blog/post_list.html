@@ -18,7 +18,11 @@
                 <time>published: {{ post.published_date }}</time>
                 <h2><a href="">{{ post.title }}</a></h2>
                 <p>{{ post.text|linebreaksbr }}</p>
+                {% if post.imgURL != None %}
+                 <img src={{post.imgURL}} alt=""/>
+                {% endif %}
             </article>
         {% endfor %}
     </body>
+
 </html>
